@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Eventos</title>
+</head>
+
+<body>
+    <main id="contenedor-main" class="flex flex-col w-[100%] bg-[#1E323E]">
+        <section>
+            <div class="m-10">
+                <div id="box" class="bg-gray-500 w-[300px] h-[300px] ml-10 border-2 border-[#244151]"></div>
+                <button id="boton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold m-4 ml-10 py-2 px-4 rounded">Change</button>
+            <div>
+        </section>
+
+        <section>
+            <div class="ml-10">
+                <div id="boxTexto" class="bg-gray-500 w-[300px] h-[300px] ml-10 border-2 border-[#244151]"></div>
+                <input id="input" class="ml-10 mt-5" type="text" placeholder="Ingrese un texto">
+                <button id="botonReset" class="bg-yellow-300 hover:bg-blue-700 text-black font-bold m-4 ml-10 py-2 px-4 rounded">Reset</button>
+            </div>
+        </section>
+
+        <section class="flex flex-row">
+            <div class="flex m-10">
+                <div id="boxTexto" class="bg-gray-500 w-[300px] h-[300px] ml-10 border-2 border-[#244151]">
+                    <div class="p-10">
+                        <label for="estatura"> Estatura (cm)</label>
+                        <input id="estatura" type="number">
+
+                        <label for="peso"> Peso (kg)</label>
+                        <input id="peso" type="number">
+                        <button id="botonCalcular" class="bg-blue-500 hover:bg-blue-700 text-white font-bold m-4 ml-10 py-2 px-4 rounded">Calcular IMC</button>
+                    </div>
+                </div>
+                <div class="flex bg-gray-500 w-[300px] h-[150px] ml-10 border-2 border-[#244151]">
+                    <div>
+                        <h1 class="text-2xl font-bold p-2 px-5">Resultado:</p>
+                        <p class="text-lg p-2 px-5" id="resultado"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex">
+            <div class="m-10">
+                <div class="bg-gray-500 w-[300px] h-[350px] ml-10 border-2 border-[#244151]">
+                    <div class="p-10 flex flex-col gap-4">
+                        <div>
+                            <label class="text-lg font-bold" for="pesos">Monto en pesos</label>
+                            <p class="text-sm pb-1">Sin comas ni puntos</p>
+                            <input class="p-1" id="pesos" type="number">
+                        </div>
+                        <div>
+                            <label class="text-lg font-bold" for="dolares">Monto en dolares</label>
+                            <p class="text-sm pb-1">Sin comas ni puntos</p>
+                            <input class="p-1" id="dolares" type="number">
+                        </div>
+                        
+                        <button id="calcularConversion" class="bg-blue-500 hover:bg-blue-700 text-white font-bold m-4 py-2 px-4 rounded">Convertir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex m-10">
+                <div class="bg-gray-500 w-[300px] h-[350px] ml-10 border-2 border-[#244151]">
+                    <div class="flex flex-col p-10 gap-1">
+                        <label class="text-xl font-bold" for="">Moneda local</label>
+                        <p>Sin comas ni puntos</p>
+                        <input id="pesosLocalDolares" type="number">
+
+                        <label class="text-xl font-bold" for="">Dólares</label>
+                        <p>Sin comas ni puntos</p>
+                        <input id="dolaresLocalDolares" type="number">
+                        <div class="flex">
+                            <button id="convertirLocalDolares" class="bg-blue-500 hover:bg-blue-700 text-white font-bold m-4 py-2 px-4 rounded">Convert</button>
+                            <button id="resetLocalDolares" class="bg-blue-500 hover:bg-blue-700 text-white font-bold m-4 py-2 px-4 rounded">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-500 w-[300px] h-[350px] ml-10 border-2 border-[#244151]">
+                    <div class="flex flex-col p-10 gap-1">
+                        <label class="text-xl font-bold" for="">Dólares</label>
+                        <p>Sin comas ni puntos</p>
+                        <input id="dolaresDolaresLocal" type="number">
+
+                        <label class="text-xl font-bold" for="">Moneda local</label>
+                        <p>Sin comas ni puntos</p>
+                        <input id="pesosDolaresLocal" type="number">
+
+                        <div class="flex">
+                            <button id="convertirDolaresLocal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold m-4 py-2 px-4 rounded">Convert</button>
+                            <button id="resetDolaresLocal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold m-4 py-2 px-4 rounded">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
